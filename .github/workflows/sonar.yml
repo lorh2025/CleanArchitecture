@@ -39,7 +39,7 @@ jobs:
           dotnet-sonarscanner begin /k:"lorh2025_CleanArchitecture" /o:"lorh2025" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
 
       - name: Build project
-        run: dotnet build CleanArchitecture.sln --configuration Release
+        run: dotnet build --configuration Release
 
       - name: End SonarQube Analysis
         env:
